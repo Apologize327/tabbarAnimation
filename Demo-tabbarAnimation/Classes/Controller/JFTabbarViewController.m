@@ -116,7 +116,6 @@
 
 -(void)floatUp{
     if (!self.isTransform) {
-        _folatImageView.layer.transform = CATransform3DMakeRotation(0, 0, 0, 0);
         [UIView animateWithDuration:1.0f animations:^{
             _folatImageView.layer.transform = CATransform3DMakeRotation(-20 * M_PI/180.0, 0, 0, 1);
         } completion:^(BOOL finished) {
@@ -128,7 +127,6 @@
 
 -(void)floatDown{
     if (self.isTransform) {
-        _folatImageView.layer.transform = CATransform3DMakeRotation(-20 * M_PI/180.0, 0, 0, 1);
         [UIView animateWithDuration:1.0f animations:^{
             _folatImageView.layer.transform = CATransform3DMakeRotation(0, 0, 0, 0);
         } completion:^(BOOL finished) {
